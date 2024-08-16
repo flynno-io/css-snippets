@@ -1,1 +1,6 @@
-/.vscode
+.vscode
+.DS_Store
+node_modules
+.o
+.env
+.log
