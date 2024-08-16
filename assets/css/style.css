@@ -1,0 +1,159 @@
+:root {
+  /* CSS HEX */
+ --wisteria: #df66e6;
+ --tapestry: #c25dc9;
+ --affair: #6b4774;
+ --gray-nurse: #e0e8e1;
+ --outer-space: #343c43;
+ /* Properties */
+  --border-radius: 8px;
+  --text-align: center;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background: var( --outer-space);
+}
+
+/* Webpage Header */
+header {
+  margin: 40px 15%;
+  text-align: var(--text-align);
+  color: var(--gray-nurse);
+}
+
+/* Webpage Title */
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: var(--margin);
+  color: var(--wisteria);
+}
+
+/* Webpage Text */
+header h1 + p {
+  line-height: 1.5;
+  font-size: 1rem;
+  padding: 15px 0;
+}
+
+/* Card */
+section {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  /* row-gap: 5px; */
+  flex: 0 0 30%;
+  margin: 20px 0;
+  padding: 10px;
+  color: var(--gray-nurse);
+  border: 2px dashed var(--gray-nurse);
+  background: var( --outer-space);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Card Titles */
+section h2 {
+  color: var(--wisteria);
+  margin-top: -28px;
+  font-size: 1.5rem;
+  border: 1px solid var(--gray-nurse);
+  border-radius: var(--border-radius);
+  padding: 5px 6px;
+  background: var( --outer-space);
+  transition: all 0.5s ease-in-out;
+}
+
+section:hover,
+section:hover h2 {
+  box-shadow: inset 0px 0px 8px var(--wisteria),
+  0 0 15px var(--wisteria);
+  cursor: pointer;
+}
+
+/* Card Text */
+section p {
+  font-size: .9rem;
+  color: var(--tapestry);
+  line-height: 1.5;
+  margin: 5px;
+  padding: 4px 0 0 0;
+}
+
+/* Card CSS Snippets - Code */
+section > pre {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-self: stretch;
+  flex-grow: 1;
+  margin: 5px;
+  padding: 10px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  font-family: Consolas, Monaco, monospace;
+  font-size: .8rem;
+  background-image: linear-gradient(var(--affair) 0%, var(--tapestry) 100%);
+  border-radius: var(--border-radius);
+  color: var(--gray-nurse);
+  user-select: all;
+  cursor: text;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  padding: 50px;
+  text-align: center;
+  background: var( --outer-space);
+  color: var(--wisteria);
+  margin-top: auto;
+}
+
+footer h2 {
+  font-size: 1.3em;
+}
+
+/* Laptops and tablets */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  section {
+    flex: 0 0 45%;
+  }
+
+  section > p {
+    font-size: 1rem;
+  }
+
+  section > pre {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+
+  section {
+    flex: 0 0 95%;
+  }
+
+  section > p {
+    font-size: 1rem;
+  }
+
+  section > pre {
+    font-size: 1rem;
+  }
+}
